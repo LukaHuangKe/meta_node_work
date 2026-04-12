@@ -14,4 +14,5 @@ func main() {
 
 	var isTrue bool = true
 	fmt.Println(isTrue)
+	fmt.Println("aaa")
 }
