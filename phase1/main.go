@@ -2,15 +2,51 @@ package main
 
 import (
 	"fmt"
+	"phase1/go_advance"
 	"phase1/go_basic"
 )
 
-// TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
 func main() {
-	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-	goBasic()
+	//goBasic()
+	goAdvance()
+}
+
+func goAdvance() {
+	// 1.
+	//fmt.Println(go_advance.Add10(proto.Int64(10)))
+
+	// 2.
+	//fmt.Println(go_advance.SliceMul2([]int64{1, 2, 3}))
+
+	// 3.
+	//go_advance.GoroutineOddEvenNum()
+
+	// 4.
+	//go_advance.JobTicker()
+
+	// 5.
+	//rec := &go_advance.Rectangle{
+	//	Width: 10,
+	//	Long:  20,
+	//}
+	//rec.Area()
+	//rec.Perimeter()
+	//
+	//circle := &go_advance.Circle{
+	//	Radius: 10,
+	//}
+	//circle.Perimeter()
+	//circle.Area()
+
+	// 6.
+	employee := &go_advance.Employee{
+		Person: &go_advance.Person{
+			Name: "hk test",
+			Age:  18,
+		},
+		EmployeeID: 123,
+	}
+	employee.PrintInfo()
 }
 
 func goBasic() {
