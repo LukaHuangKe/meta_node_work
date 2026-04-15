@@ -39,14 +39,26 @@ func goAdvance() {
 	//circle.Area()
 
 	// 6.
-	employee := &go_advance.Employee{
-		Person: &go_advance.Person{
-			Name: "hk test",
-			Age:  18,
-		},
-		EmployeeID: 123,
-	}
-	employee.PrintInfo()
+	//employee := &go_advance.Employee{
+	//	Person: &go_advance.Person{
+	//		Name: "hk test",
+	//		Age:  18,
+	//	},
+	//	EmployeeID: 123,
+	//}
+	//employee.PrintInfo()
+
+	// 7.
+	//go_advance.ChannelWork1()
+
+	// 8.
+	//go_advance.ChannelWork2()
+
+	// 9.
+	//go_advance.MutexWork1()
+
+	// 10.
+	go_advance.MutexWork2()
 }
 
 func goBasic() {
