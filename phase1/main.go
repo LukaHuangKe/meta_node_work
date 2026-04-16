@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"phase1/go_advance"
 	"phase1/go_basic"
 )
 
@@ -58,7 +57,7 @@ func goAdvance() {
 	//go_advance.MutexWork1()
 
 	// 10.
-	go_advance.MutexWork2()
+	//go_advance.MutexWork2()
 }
 
 func goBasic() {
