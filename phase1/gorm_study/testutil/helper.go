@@ -140,9 +140,9 @@ func NewTestDB(t *testing.T, filename string) *gorm.DB {
 	//   (total connections, including idle and in-use)
 	// - SetConnMaxLifetime: Maximum amount of time a connection may be reused
 	//   (prevents using stale connections)
-	sqlDB.SetMaxIdleConns(2)                   // Keep 2 idle connections ready
-	sqlDB.SetMaxOpenConns(5)                   // Allow up to 5 concurrent connections
-	sqlDB.SetConnMaxLifetime(30 * time.Minute) // Reuse connections for up to 30 minutes
+	sqlDB.SetMaxIdleConns(2)                   // Keep 2 idle connections ready 控制保留几个空闲连接
+	sqlDB.SetMaxOpenConns(5)                   // Allow up to 5 concurrent connections 控制最多开几个连接
+	sqlDB.SetConnMaxLifetime(30 * time.Minute) // Reuse connections for up to 30 minutes 控制连接用多久就扔掉重建
 
 	t.Cleanup(func() {
 		_ = sqlDB.Close()
@@ -224,7 +224,8 @@ func newMySQLDB(t *testing.T) (*gorm.DB, error) {
 
 	return gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// Logger: Set to logger.Info to see all SQL queries in development
-		Logger: logger.Default.LogMode(logger.Silent),
+		//Logger: logger.Default.LogMode(logger.Silent),
+		Logger: logger.Default.LogMode(logger.Info),
 
 		// NamingStrategy: Customize table and column naming
 		NamingStrategy: schema.NamingStrategy{
