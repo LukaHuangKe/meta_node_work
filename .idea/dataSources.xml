@@ -15,5 +15,19 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/phase1/gorm_study/db/raw_sqlite.db</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="associations_basics_sqlite" uuid="63c4bf61-d558-409a-9832-ff9a25b62c95">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/phase1/gorm_study/db/associations_basics_sqlite.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="associations-many2many_sqlite" uuid="55b03aae-b708-429b-ace2-df61c9fea851">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/phase1/gorm_study/db/associations-many2many_sqlite.db</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
