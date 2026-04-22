@@ -3,12 +3,23 @@ package main
 import (
 	"fmt"
 	"phase1/go_basic"
+	"phase1/phase1_work"
+	"phase1/phase1_work/mysql"
 )
 
+// 大作业的main，代码都在phase1_work目录下
 func main() {
-	//goBasic()
-	goAdvance()
+	// 初始化数据库
+	mysql.InitDB()
+	// 初始化GIN
+	phase1_work.InitGinRouting()
 }
+
+// 日常学习的main
+//func main() {
+//	//goBasic()
+//	//goAdvance()
+//}
 
 func goAdvance() {
 	// 1.

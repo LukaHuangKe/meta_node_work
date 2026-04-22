@@ -1,0 +1,169 @@
+syntax = "proto3";
+
+package work;
+option go_package = "./pb";
+
+message LoginReq {
+  string username = 1;
+  string password = 2;
+}
+
+message LoginResp {
+  string jwt_token = 1;
+  User user = 2;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message RegisterReq {
+  string username = 1;
+  string password = 2;
+  string email = 3;
+}
+
+message RegisterResp {
+  string jwt_token = 1;
+  User user = 2;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message User {
+  string user_id = 1;
+  string username = 2;
+  string email = 3;
+}
+
+message Post {
+  string post_id = 1;
+  string title = 2;
+  string content = 3;
+  int64 create_time = 4;
+  int64 update_time = 5;
+  User author = 6;
+}
+
+message CreatePostReq {
+  Post post = 1;
+}
+
+message CreatePostResp {
+  string post_id = 1;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message UpdatePostReq {
+  string title = 1;
+  string content = 2;
+  string post_id = 3;
+}
+
+message UpdatePostResp {
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message Pagination {
+  int32 page_no = 1;
+  int32 page_size = 2;
+}
+
+message ListPostReq {
+  int64 start_time = 1;
+  int64 end_time = 2;
+  string post_id = 3;
+
+  Pagination pagination = 10;
+}
+
+message ListPostResp {
+  int64 total = 1;
+  repeated Post post_list = 2;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message GetPostDetailReq {
+  string post_id = 1;
+}
+
+message GetPostDetailResp {
+  Post post = 1;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message DeletePostReq {
+  string post_id = 1;
+}
+
+message DeletePostResp {
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message Comment {
+  string comment_id = 1;
+  string content = 2;
+  string post_id = 3;
+  int64 create_time = 4;
+  int64 update_time = 5;
+  User author = 6;
+}
+
+message CreateCommentReq {
+  Comment comment = 1;
+}
+
+message CreateCommentResp {
+  string comment_id = 1;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+message ListCommentByPostIdReq {
+  string post_id = 1;
+  Pagination pagination = 10;
+}
+
+message ListCommentByPostIdResp {
+  int64 total = 1;
+  repeated Comment comment_list = 2;
+
+  int32 code = 127; //status code
+  string message = 128; //status code
+}
+
+service WorkService {
+  // 登陆注册接口
+  // @post /api/v1/no_login/register
+  rpc Register(RegisterReq) returns (RegisterResp);
+
+  // @post /api/v1/no_login/login
+  rpc Login(LoginReq) returns (LoginResp);
+
+  // 文章的crud接口
+  // @post /api/v1/login/post/create
+  rpc CreatePost(CreatePostReq) returns (CreatePostResp);
+  // @post /api/v1/login/post/update
+  rpc UpdatePost(UpdatePostReq) returns (UpdatePostResp);
+  // @post /api/v1/no_login/post/list
+  rpc ListPost(ListPostReq) returns (ListPostResp);
+  // @post /api/v1/no_login/post/detail
+  rpc GetPostDetail(GetPostDetailReq) returns (GetPostDetailResp);
+  // @post /api/v1/login/post/delete
+  rpc DeletePost(DeletePostReq) returns (DeletePostResp);
+
+  // 评论相关接口
+  // @post /api/v1/login/comment/create
+  rpc CreateComment(CreateCommentReq) returns (CreateCommentResp);
+  // @post /api/v1/no_login/comment/list_by_post_id
+  rpc ListCommentByPostId(ListCommentByPostIdReq) returns (ListCommentByPostIdResp);
+}
