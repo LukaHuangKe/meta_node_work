@@ -67,7 +67,19 @@ CREATE TABLE `comments` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='文章评论表';
 ```
 
-## 各个包的作用
+## 错误码
+API接口code返回非0即代表失败，返回0代表成功
 
 
 ## 接口作用
+| 接口模块 | 接口路径 | 请求方法 | 接口作用 | 登录权限要求 |
+| ---- | ---- | ---- | ---- | ---- |
+| 用户登录注册 | /api/v1/no_login/register | POST | 用户账号注册 | 无需登录 |
+| 用户登录注册 | /api/v1/no_login/login | POST | 用户账号登录 | 无需登录 |
+| 文章管理 | /api/v1/login/post/create | POST | 新建发布文章 | 需要登录 |
+| 文章管理 | /api/v1/login/post/update | POST | 修改更新已有文章 | 需要登录 |
+| 文章管理 | /api/v1/no_login/post/list | POST | 获取文章分页列表 | 无需登录 |
+| 文章管理 | /api/v1/no_login/post/detail | POST | 获取单篇文章详情 | 无需登录 |
+| 文章管理 | /api/v1/login/post/delete | POST | 删除指定文章 | 需要登录 |
+| 评论管理 | /api/v1/login/comment/create | POST | 发布文章评论 | 需要登录 |
+| 评论管理 | /api/v1/no_login/comment/list_by_post_id | POST | 根据文章ID查询对应评论列表 | 无需登录 |

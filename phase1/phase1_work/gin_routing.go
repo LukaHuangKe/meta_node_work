@@ -4,7 +4,10 @@ import (
 	"bytes"
 	"io"
 	"log"
+	"net/http"
 	"phase1/phase1_work/handler"
+	"phase1/phase1_work/utils"
+	"strings"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -34,6 +37,7 @@ func InitGinRouting() {
 
 		// 需要登录
 		login := apiV1.Group("/login")
+		login.Use(authMiddleware())
 		{
 			// 文章
 			login.POST("/post/create", handler.CreatePost)
@@ -92,5 +96,50 @@ func loggerMiddleware() gin.HandlerFunc {
 		log.Printf("[Request] %s", string(requestBody))
 		log.Printf("[Response] Status: %d, Body: %s", status, string(rw.body))
 		log.Printf("[Latency] %v\n", latency)
+	}
+}
+
+// ========== 认证中间件 ==========
+func authMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		// 从 Header 获取 Token
+		authHeader := c.GetHeader("Authorization")
+		if authHeader == "" {
+			c.JSON(http.StatusUnauthorized, gin.H{
+				"code":    http.StatusUnauthorized,
+				"message": "Authorization header required",
+			})
+			c.Abort()
+			return
+		}
+
+		// 提取 Token（Bearer <token>）
+		parts := strings.Split(authHeader, " ")
+		if len(parts) != 2 || parts[0] != "Bearer" {
+			c.JSON(http.StatusUnauthorized, gin.H{
+				"code":    http.StatusUnauthorized,
+				"message": "Invalid authorization header format",
+			})
+			c.Abort()
+			return
+		}
+
+		tokenString := parts[1]
+
+		// 验证 Token
+		userInfo, err := utils.ParseToken(tokenString)
+		if err != nil {
+			c.JSON(http.StatusUnauthorized, gin.H{
+				"code":    http.StatusUnauthorized,
+				"message": "Invalid token",
+			})
+			c.Abort()
+			return
+		}
+
+		// 将用户信息存储到 Context
+		c.Set(utils.UserId, userInfo.UserID)
+
+		c.Next()
 	}
 }

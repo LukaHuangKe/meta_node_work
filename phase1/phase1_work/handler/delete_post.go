@@ -9,7 +9,7 @@ import (
 func DeletePost(c *gin.Context) {
 	var req pb.DeletePostReq
 	if err := c.ShouldBindJSON(&req); err != nil {
-		c.JSON(400, gin.H{"error": "参数错误"})
+		c.JSON(400, gin.H{"code": "400", "message": "参数错误"})
 		return
 	}
 
