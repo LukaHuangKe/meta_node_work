@@ -57,9 +57,7 @@ message CreatePostResp {
 }
 
 message UpdatePostReq {
-  string title = 1;
-  string content = 2;
-  string post_id = 3;
+  Post post = 1;
 }
 
 message UpdatePostResp {

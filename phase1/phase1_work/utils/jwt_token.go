@@ -47,7 +47,10 @@ func GenerateToken(userID int64) (string, error) {
 	return token.SignedString([]byte(JwtSecret))
 }
 
-func GetUserID(c *gin.Context) int64 {
-	userID, _ := c.Get("userID")
-	return userID.(int64)
+func GetUserID(c *gin.Context) (int64, error) {
+	userID, ok := c.Get(UserId)
+	if !ok {
+		return 0, errors.New("user ID not found")
+	}
+	return userID.(int64), nil
 }

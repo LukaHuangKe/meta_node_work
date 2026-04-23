@@ -68,7 +68,7 @@ CREATE TABLE `comments` (
 ```
 
 ## 错误码
-API接口code返回非0即代表失败，返回0代表成功
+API接口code返回非200即代表失败，返回200代表成功
 
 
 ## 接口作用
