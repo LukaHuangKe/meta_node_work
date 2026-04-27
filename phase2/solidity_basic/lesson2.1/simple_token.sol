@@ -1,0 +1,53 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SimpleToken {
+    // 状态变量。有几个可以变成constant的
+    string public name = "My Token";
+    string public symbol = "MTK";
+    uint8 public decimals = 18;
+    uint256 public totalSupply;
+    
+    address public owner;
+    
+    mapping(address => uint256) public balanceOf;
+    
+    // 事件
+    event Transfer(address indexed from, address indexed to, uint256 value);
+    
+    // 构造函数
+    constructor(uint256 _initialSupply) {
+        owner = msg.sender;
+        totalSupply = _initialSupply * 10 ** uint256(decimals);
+        balanceOf[msg.sender] = totalSupply;
+    }
+    
+    // 转账函数
+    function transfer(address _to, uint256 _value) public returns (bool) {
+        require(_to != address(0), "Cannot transfer to zero address");
+        require(balanceOf[msg.sender] >= _value, "Insufficient balance");
+        
+        balanceOf[msg.sender] -= _value;
+        balanceOf[_to] += _value;
+        
+        emit Transfer(msg.sender, _to, _value);
+        return true;
+    }
+    
+    // 查询余额
+    function getBalance(address _owner) public view returns (uint256) {
+        return balanceOf[_owner];
+    }
+    
+    // 铸造代币（仅owner）
+    function mint(address _to, uint256 _amount) public {
+        require(msg.sender == owner, "Only owner can mint");
+        require(_to != address(0), "Cannot mint to zero address");
+        
+        totalSupply += _amount;
+        balanceOf[_to] += _amount;
+        
+        // 从0地址转账就是铸造代币吗？貌似是的
+        emit Transfer(address(0), _to, _amount);
+    }
+}
