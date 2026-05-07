@@ -26,7 +26,8 @@ library AddressSet {
         
         uint256 toDeleteIndex = index - 1;
         uint256 lastIndex = set.values.length - 1;
-        
+
+        //
         if (toDeleteIndex != lastIndex) {
             address lastValue = set.values[lastIndex];
             set.values[toDeleteIndex] = lastValue;
