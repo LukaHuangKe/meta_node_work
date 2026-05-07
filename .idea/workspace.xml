@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae71b8dd-0c15-4492-b8c1-b5a6fdf5d905" name="更改" comment="change">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/db-forest-config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/go.imports.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/meta_node_work.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/protoeditor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phase2/solidity_basic/lesson6.2/white_address.sol" beforeDir="false" afterPath="$PROJECT_DIR$/phase2/solidity_basic/lesson6.2/white_address.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,12 +35,12 @@
     &quot;assignee&quot;: &quot;LukaHuangKe&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:LukaHuangKe/meta_node_work.git&quot;,
-    &quot;accountId&quot;: &quot;af0da972-e8e5-4e78-a819-dc3116e97d5b&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:LukaHuangKe/meta_node_work_basic.git",
+    "accountId": "af0da972-e8e5-4e78-a819-dc3116e97d5b"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/phase1/main.go" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -115,6 +106,7 @@
       <recent name="$PROJECT_DIR$/phase1/gin_study/08-protobuf" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/phase2/solidity_advance" />
       <recent name="$PROJECT_DIR$/phase1/phase1_work/utils" />
       <recent name="$PROJECT_DIR$/phase1/gin_study/08-protobuf/pb" />
       <recent name="$PROJECT_DIR$/phase1/gorm_study/gorm_study_advance" />
