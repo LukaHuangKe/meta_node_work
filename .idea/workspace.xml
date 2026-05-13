@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae71b8dd-0c15-4492-b8c1-b5a6fdf5d905" name="更改" comment="lesson8.1">
+    <list default="true" id="ae71b8dd-0c15-4492-b8c1-b5a6fdf5d905" name="更改" comment="lesson8.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -281,7 +281,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="gorm初始化" />
     <MESSAGE value="gorm basic study" />
     <MESSAGE value="gorm advance study" />
     <MESSAGE value="gin init" />
@@ -306,7 +305,8 @@
     <MESSAGE value="lesson7.1" />
     <MESSAGE value="lesson7.2" />
     <MESSAGE value="lesson8.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson8.1" />
+    <MESSAGE value="lesson8.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson8.2" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
