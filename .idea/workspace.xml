@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae71b8dd-0c15-4492-b8c1-b5a6fdf5d905" name="更改" comment="lesson8.2">
+    <list default="true" id="ae71b8dd-0c15-4492-b8c1-b5a6fdf5d905" name="更改" comment="lesson9.2">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,12 +35,12 @@
     &quot;assignee&quot;: &quot;LukaHuangKe&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:LukaHuangKe/meta_node_work_basic.git",
-    "accountId": "af0da972-e8e5-4e78-a819-dc3116e97d5b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:LukaHuangKe/meta_node_work_basic.git&quot;,
+    &quot;accountId&quot;: &quot;af0da972-e8e5-4e78-a819-dc3116e97d5b&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/phase1/main.go" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -93,7 +94,7 @@
     &quot;last_opened_file_path&quot;: &quot;/Users/huangke/go/hkproject/meta_node_work_basic&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;google.protobuf.language&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -196,9 +197,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.phase2" />
       <item itemvalue="Go Build.01-hello-world" />
       <item itemvalue="Go Build.phase1" />
+      <item itemvalue="Go Build.phase2" />
       <item itemvalue="Go Test.TestAssociationsAPI in phase1/gorm_study/gorm_study_advance" />
       <item itemvalue="Go Test.TestHookBeforeCreate in phase1/gorm_study/gorm_study_advance" />
       <item itemvalue="Go Test.TestLoopSelect in phase1/go_advance" />
@@ -281,7 +282,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
-    <MESSAGE value="gorm basic study" />
     <MESSAGE value="gorm advance study" />
     <MESSAGE value="gin init" />
     <MESSAGE value="gin routing" />
@@ -306,7 +306,8 @@
     <MESSAGE value="lesson7.2" />
     <MESSAGE value="lesson8.1" />
     <MESSAGE value="lesson8.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="lesson8.2" />
+    <MESSAGE value="lesson9.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="lesson9.2" />
   </component>
   <component name="VgoModernizerVersionTracker">
     <upgrades>
